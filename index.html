@@ -1,13 +1,111 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Keller Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
-		
+            table, th, td {border: 1px solid black;}
+            
+            table {background-color: aquamarine;}
+            
+            .grid-container {
+              display: grid;
+              grid-template-columns: auto auto auto;
+              background-color: #2196F3;
+              padding: 10px;
+            }
+            .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(0, 0, 0, 0.8);
+              padding: 20px;
+              font-size: 30px;
+              text-align: center;
+                
+            .scroll {overflow: auto;}
+                
+            @media only screen and (max-width: 600px) {
+              body {
+                background-color: lightblue;
+              }
+            }
+            
 		</style>
 	</head> 
 <body> 
 
+    <table>
+        <tr>
+            <th>Title</th>
+            <th> Director </th>
+            <th> Leading Actor</th>
+            <th>Rating</th>
+            <th> Description </th>
+            <th>Review</th>
+        </tr>
+            <td> Project Almanac</td>
+            <td> Dean Israelite</td>
+            <td> Jonny Weston </td>
+            <td> PG-13</td>
+            <td> Friends work together to build a time machine.</td>
+            <td> <a href="https://www.nytimes.com/2015/01/30/movies/project-almanac-a-teenage-tale-of-time-travel.html"> The New York Times </a></td>
+    </table>
+    
+    <br>
+    <br>
+    
+    <h2> Music Survey</h2>
+    <div class="grid-container">
+        <div class="grid-item">	<label for="myName">*Name:</label>
+				<input type="text" name="myName" id="myName" required="required" placeholder="your first and last name"></div>
+        
+        <div class="grid-item">	<label for="myEmail">*Email:</label>
+            <input type="text" name="myEmail" id="myEmail" required="required" placeholder="you@yourdomain.com"></div>
+
+        <div class="grid-item">	<div class="scroll">
+            <input type="text" name="myName" id="myName" required="required" placeholder="Enter Text..."> </div></div>
+        
+        <div class="grid-item">
+			<fieldset id="radio"><legend> Best Instrument of the Three: </legend>
+				Select One: <br>
+				<input type="radio" name="myStatus" id="T" value="Trumpet">
+				Trumpet <br>
+				<input type="radio" name="myStatus" id="G" value="Guitar">
+				Guitar <br>
+				<input type="radio" name="myStatus" id="P" value="Piano">
+				Piano <br>
+        </div>
+        
+          <div class="grid-item">
+			Select One or More That You Like: <br>
+			<input type="checkbox" name "myOrg" id="b" value="Beatles">
+			The Beatles <br>
+			<input type="checkbox" name "myOrg" id="p" value="PinkFloyd">
+			Pink Floyd <br>
+			<input type="checkbox" name "myOrg" id="v" value="Van Halen">
+			Van Halen <br>
+          </div>
+            
+          <div class="grid-item">
+			What's your favorite type of music? <br>
+			<select size="1" name="music" id="music">
+				<option value="Rock"> Rock </option>
+				<option value="HipHop"> Hip Hop </option>
+				<option value="Pop"> Pop </option>
+				<option value="Country"> Country </option>
+			</select>
+            </div>  
+            
+          <div class="grid-item">
+			<input id="mySubmit" type="submit" value="Submit">
+          </div>
+            
+            
+          <div class="grid-item">
+			<input id="myReset" type="reset" value="Reset">
+          </div>    
+    
+        <footer>
+            Christian Keller // s535636@nwmissouri.edu
+        </footer>
 </body> 
 </html> 
